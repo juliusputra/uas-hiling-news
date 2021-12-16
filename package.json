@@ -1,0 +1,21 @@
+{
+  "name": "uas-news",
+  "version": "1.0.0",
+  "description": "UAS PTI LAB Semester 3",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filbertmangiri/uas-news.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filbertmangiri/uas-news/issues"
+  },
+  "homepage": "https://github.com/filbertmangiri/uas-news#readme"
+}
