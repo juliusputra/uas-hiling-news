@@ -1,4 +1,12 @@
+import { Link } from "react-router-dom"
+
 export default function BlogList({ blogs }) {
+	const DISPLAY_CONTENT_LIMIT = 80
+
+	function truncate(str, n){
+		return (str.length > n) ? str.substr(0, n-1) + ' . . .' : str
+	}
+
 	return (
 		<div className="d-flex flex-column gap-3">
 			{blogs.map(obj => (
@@ -7,7 +15,7 @@ export default function BlogList({ blogs }) {
 						<h5 className="card-title">{obj.title}</h5>
 						<p className="card-title position-absolute bottom-0 end-0 px-2 py-2">{obj.date}</p>
 						<p className="card-text">{obj.content}</p>
-						<a className="link-light" href="#">Read more</a>
+						{obj.content.length > DISPLAY_CONTENT_LIMIT && <Link className="btn btn-dark" to={`/blogs/${obj.slug}`}>Read more</Link>}
 					</div>
 				</div>
 			))}

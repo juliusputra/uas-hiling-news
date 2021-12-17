@@ -7,10 +7,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 
 import Navbar from './Components/Partials/Navbar/Navbar';
 import News from './Components/Pages/News/News';
+import NewsDetail from './Components/Pages/News/NewsDetail';
 import Blogs from './Components/Pages/Blogs/Blogs';
 import Developers from './Components/Pages/Developers/Developers';
 import Login from './Components/Pages/Login/Login';
 import Error from './Components/Pages/Error/Error';
+import BlogsDetail from './Components/Pages/Blogs/BlogsDetail';
 
 export default function App() {
 	return (
@@ -21,7 +23,9 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<News />} />
 					<Route path="/news" element={<News />} />
+					<Route path="/news/:slug" element={<NewsDetail />} />
 					<Route path="/blogs" element={<Blogs />} />
+					<Route path="/blogs/:slug" element={<BlogsDetail />} />
 					<Route path="/developers" element={<Developers />} />
 
 					<Route path="/login" element={<Login />} />
